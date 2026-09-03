@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#6457d9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="DuniaKu" />
+  <title>DuniaKu v2</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">DK</div>
+        <div>
+          <div class="eyebrow">PLAY • CREATE • EXPLORE</div>
+          <h1>DuniaKu</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="engine-chip" id="engineChip" title="2D game engine"><span class="engine-dot"></span> Phaser 4</button>
+        <button class="pill" id="starsBtn">⭐ <span id="stars">0</span></button>
+        <button class="avatar-btn" id="profileBtn">🧒</button>
+      </div>
+    </header>
+
+    <section class="hero hero-v2">
+      <div class="hero-copy">
+        <span class="hero-kicker">Hai <strong id="childName">Kawan!</strong> 👋</span>
+        <h2>Dunia kecil yang hidup ikut cara kamu.</h2>
+        <p>Jaga Momo, main arcade, cipta benda sendiri dan guna Stars untuk buka bilik, aksesori dan hadiah.</p>
+        <div class="hero-actions">
+          <button class="hero-btn primary" id="heroPetBtn">Masuk Pet World</button>
+          <button class="hero-btn ghost" id="shopBtn">🛍️ Star Shop</button>
+          <button class="hero-btn ghost" id="dailyBtn">🎁 Daily Gift</button>
+        </div>
+      </div>
+      <div class="hero-world" aria-hidden="true">
+        <div class="window"><span></span><span></span><span></span><span></span></div>
+        <div class="plant"><i></i></div>
+        <div class="rug"></div>
+        <div class="hero-pet" id="petPreview">
+          <div class="pet-shadow"></div>
+          <div class="pet-body-preview"><i class="ear e1"></i><i class="ear e2"></i><i class="eye x1"></i><i class="eye x2"></i><i class="mouth"></i></div>
+        </div>
+        <div class="toy-ball"></div>
+      </div>
+    </section>
+
+    <section class="quick-strip">
+      <div><b id="quickPetName">Momo</b><span>Pet buddy</span></div>
+      <div><b id="quickXp">0 XP</b><span>Progress</span></div>
+      <div><b id="quickBest">0</b><span>Best arcade</span></div>
+      <div><b id="quickOwned">0</b><span>Unlocks</span></div>
+    </section>
+
+    <nav class="tabs" aria-label="Kategori">
+      <button class="tab active" data-tab="all">Semua</button>
+      <button class="tab" data-tab="pet">🐣 Pet</button>
+      <button class="tab" data-tab="game">🎮 Arcade</button>
+      <button class="tab" data-tab="create">🎨 Cipta</button>
+      <button class="tab" data-tab="think">🧠 Puzzle</button>
+    </nav>
+
+    <main>
+      <section class="section-head">
+        <div>
+          <h3>Aktiviti</h3>
+          <p><span id="activityCount">0</span> aktiviti • progress disimpan dalam device</p>
+        </div>
+        <button class="text-btn" id="achievementsBtn">🏆 Pencapaian</button>
+      </section>
+      <section id="activityGrid" class="activity-grid"></section>
+    </main>
+
+    <footer>
+      <span>🔒 Offline-first • Tiada login • Tiada ads • Local save</span>
+      <span>DuniaKu v2.0 • 2D Game Edition</span>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <button id="closeModal" class="icon-btn">←</button>
+        <div>
+          <h2 id="modalTitle">Aktiviti</h2>
+          <p id="modalSubtitle"></p>
+        </div>
+        <div class="modal-stars">⭐ <span id="modalStars">0</span></div>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Phaser is cached by the service worker on first online load so the PWA can run offline afterwards. -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@4.2.1/dist/phaser.min.js"></script>
+  <script src="app.js"></script>
+  <script src="engine-games.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+DuniaKu v2 uses Phaser 4.2.1 (Giedi), an MIT-licensed 2D HTML5 game framework.
+Official release: https://phaser.io/download/release/v4.2.1
+CDN file used and cached by the PWA service worker:
+https://cdn.jsdelivr.net/npm/phaser@4.2.1/dist/phaser.min.js
+
+Phaser itself is not modified by DuniaKu. The app's engine-games.js contains DuniaKu-specific game logic and vector artwork.

@@ -1,0 +1,15 @@
+{
+  "name":"DuniaKu - 2D Kids Playground",
+  "short_name":"DuniaKu",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#f5f4fb",
+  "theme_color":"#6457d9",
+  "description":"Offline-first 2D kids playground with virtual pet, arcade games, creativity and puzzles.",
+  "icons":[
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
