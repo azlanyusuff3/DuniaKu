@@ -73,7 +73,7 @@ langit petang hangat. **Ruang kosong di tengah atas** untuk logo (jangan letak t
 Buka game. Kalau gambar nampak, tick dalam senarai bawah dan commit.
 
 - [x] hero_walk.png
-- [ ] hero_pose.png
+- [x] hero_pose.png
 - [ ] items.png
 - [ ] keys.png
 - [ ] enemies.png
