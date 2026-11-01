@@ -1,5 +1,5 @@
 // Bump CACHE whenever any file changes so phones pick up the new version.
-const CACHE = 'momomaze-v1';
+const CACHE = 'momomaze-v2';
 const CORE = ['./', 'index.html', 'style.css', 'levels.js', 'art.js', 'game.js', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE.map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));

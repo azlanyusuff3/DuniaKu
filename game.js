@@ -1,7 +1,7 @@
 // Momo Maze — game loop, input, UI.
 (function () {
   'use strict';
-  const VERSION = '1.0.0';
+  const VERSION = '1.1.0';
   window.MAZE_VERSION = VERSION;
   const M = window.MazeLevels, A = window.MazeArt;
   const $ = id => document.getElementById(id);

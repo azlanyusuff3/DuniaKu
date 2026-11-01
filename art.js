@@ -59,11 +59,18 @@
     salji:  { f: ['#f2f8fd', '#e6eff8'], top: '#7fb2dc', front: '#4f7fae', deco: '#ffffff', bg: '#4d6f8f' },
     istana: { f: ['#d3c6e0', '#cabdd8'], top: '#5a4670', front: '#382a4a', deco: '#ffd36b', bg: '#1e1528' },
   };
+  // tint over real floor art where it is too close in colour to the walls
+  const FLOOR_TINT = { hutan: 'rgba(226,196,138,.5)', taman: null, salji: null };
   function rr(x, a, b, w, h, r) { x.beginPath(); x.roundRect ? x.roundRect(a, b, w, h, r) : x.rect(a, b, w, h); }
 
   function floor(x, wid, px, py, s, v) {
     const art = get('tiles_' + wid, v === 2 ? 2 : v);
-    if (art) { x.drawImage(art, px, py, s + 0.5, s + 0.5); return; }
+    if (art) {
+      x.fillStyle = PAL[wid].f[0]; x.fillRect(px, py, s + 0.5, s + 0.5); // fills any keyed-out holes
+      x.drawImage(art, px, py, s + 0.5, s + 0.5);
+      if (FLOOR_TINT[wid]) { x.fillStyle = FLOOR_TINT[wid]; x.fillRect(px, py, s + 0.5, s + 0.5); }
+      return;
+    }
     const P = PAL[wid]; x.fillStyle = P.f[v === 1 ? 1 : 0]; x.fillRect(px, py, s + 0.5, s + 0.5);
     if (v === 2) {
       x.fillStyle = P.deco; const r = s * 0.07;
