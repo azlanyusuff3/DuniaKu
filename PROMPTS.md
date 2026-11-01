@@ -82,5 +82,5 @@ Buka game. Kalau gambar nampak, tick dalam senarai bawah dan commit.
 - [x] tiles_hutan.png
 - [x] tiles_gua.png
 - [x] tiles_salji.png
-- [ ] tiles_istana.png
+- [x] tiles_istana.png
 - [ ] title_bg.png
