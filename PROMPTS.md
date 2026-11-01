@@ -83,4 +83,4 @@ Buka game. Kalau gambar nampak, tick dalam senarai bawah dan commit.
 - [x] tiles_gua.png
 - [x] tiles_salji.png
 - [x] tiles_istana.png
-- [ ] title_bg.png
+- [x] title_bg.png
