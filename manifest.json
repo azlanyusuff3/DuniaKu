@@ -1,0 +1,11 @@
+{
+  "name": "Cozy Rapids — Thunder Boats",
+  "short_name": "Cozy Rapids",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#86d7d9",
+  "theme_color": "#86d7d9",
+  "description": "A cute, low-poly 3D powerboat arcade racer. Play on the water!"
+}

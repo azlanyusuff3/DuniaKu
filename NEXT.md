@@ -9,7 +9,7 @@ besides `NOTES.md` (write decisions / known bugs there).
 
 ---
 
-## [ ] Task A — Skeleton + water + one boat that drives
+## [x] Task A — Skeleton + water + one boat that drives
 - `index.html`, `style.css`, `manifest.json`, `main.js`, `input.js`, `camera.js`, `boat.js`.
 - Low-res pixelated renderer, fog, pastel sky colour, animated wave water plane.
 - Player boat (box-built, candy colours) with arcade physics: auto throttle, steering, drift slide, bob on waves, blob shadow, wake particles.
