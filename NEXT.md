@@ -17,7 +17,7 @@ besides `NOTES.md` (write decisions / known bugs there).
 - Simple FPS counter behind `?debug=1`.
 Done when: opening the page lets me steer a boat on open water smoothly.
 
-## [ ] Task B — Track system (Sunny Cove) + laps
+## [x] Task B — Track system (Sunny Cove) + laps
 - `data.js` + `track.js`: define tracks as spline control points + width; generate banks/cliffs (instanced), buoy gates, checkpoints, start line.
 - Collision with banks (soft bounce), lap counting with checkpoints, wrong-way detection.
 - Ramps with proper air time, landing splash, jump trick spin (see README).
