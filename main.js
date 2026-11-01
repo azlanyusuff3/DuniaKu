@@ -34,6 +34,11 @@ const water=new THREE.Mesh(waterGeo,waterMat);water.frustumCulled=false;scene.ad
 let selectedBoat=BOATS[0],selectedTrack=TRACKS[0],track=null,boat=null,ai=null,hud=null;
 const chase=createChaseCamera();
 const input=createInput(canvas,$("boostBtn"),$("tiltBtn"));
+$("tiltBtn").addEventListener("rapids-tilt-changed",e=>{
+ save.settings.tilt=!!e.detail.enabled;
+ $("tiltToggle").checked=save.settings.tilt;
+ persist();
+});
 const audio=createAudio();audio.setMuted(!save.settings.sound);
 let state="title",beforeSettings="title",countdown=3.8,goTime=0,last=performance.now(),elapsed=0,frames=0,framesTime=0,tipTime=0,prevBoost=0,prevPips=0,prevAir=false;
 let lowResHeight=360;
@@ -98,7 +103,10 @@ function buildGame(){
  prevBoost=0;prevPips=boat.boostPips;prevAir=false;
 }
 function startRace(){
- audio.init();hideMenus();
+ audio.init();
+ // Restore saved tilt on a user gesture (iOS requires gesture for permission).
+ if(save.settings.tilt)input.setTilt(true);
+ hideMenus();
  buildGame();setState("countdown");countdown=3.8;goTime=0;tipTime=0;elapsed=0;frames=0;framesTime=0;
  $("tip").style.opacity="1";$("countdown").hidden=false;
 }
@@ -119,7 +127,7 @@ function pause(){if(state!=="race")return;setState("paused");showMenu("pauseMenu
 function resume(){if(state!=="paused")return;hideMenus();setState("race");last=performance.now();}
 function settingsReturn(){save.settings.sound=$("soundToggle").checked;save.settings.tilt=$("tiltToggle").checked;save.settings.wobble=$("wobbleToggle").checked;save.settings.difficulty=$("difficultySelect").value;
  audio.setMuted(!save.settings.sound);applyWobble(save.settings.wobble);
- input.setTilt(save.settings.tilt).then(enabled=>{if(!enabled&&save.settings.tilt){save.settings.tilt=false;persist();}});
+ input.setTilt(save.settings.tilt);
  persist();setState(beforeSettings);if(beforeSettings==="paused")showMenu("pauseMenu");else showMenu("titleMenu");
 }
 function openSettings(){

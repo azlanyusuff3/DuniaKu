@@ -19,6 +19,8 @@
 
 - Post-D static QA: inspected all local JS imports, DOM identifiers, and parsed all nine project JS modules successfully (after removing ES module declarations for syntax checking). Fixed initial 3D menu preview, signed lap progress for reversing, and local sprite path handling. No browser/WebGL or physical-device playtest has been performed in this session; frame rate, handling and long-race behavior remain unverified.
 
+- Post-D controls QA: restored saved device-tilt steering at race start under a user gesture, persisted changes made through the in-race Tilt button, and kept the settings checkbox in sync when sensor access is unsupported/denied. This prevents a saved Tilt: ON setting from silently starting with tilt disabled and prevents desktop browsers from claiming unsupported sensors work.
+
 ## Known bugs / TODO
 
 ## Playtest feedback (owner + Claude write here)
