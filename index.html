@@ -4,10 +4,36 @@
 <div id="overlay">
  <div id="topbar"><div class="brand"><span class="brand-mark">~</span><div><b>COZY RAPIDS</b><small>THUNDER BOATS</small></div></div><div class="stat" id="positionValue">1st</div><div id="raceInfo">LAP <b id="lapValue">1</b>/3<br><span id="boostPips">⚡○○</span></div><div id="speed"><b id="speedValue">0</b><small>KM/H</small></div></div>
  <canvas id="minimap" width="150" height="115" aria-label="Track minimap"></canvas>
- <div id="countdown">3</div><div id="wrongWay" hidden>↩ WRONG WAY!</div>
+ <div id="countdown" hidden>3</div><div id="wrongWay" hidden>↩ WRONG WAY!</div>
  <div id="tip">Follow the buoys! Drag the LEFT side to steer.</div>
  <div id="bottom"><div id="steerHint" aria-hidden="true">◀ <span>STEER</span> ▶</div><button id="tiltBtn" class="pill" type="button">Tilt: OFF</button><button id="boostBtn" class="boost" type="button">BOOST <small>HOLD</small></button></div>
+ <button id="pauseBtn" type="button" class="pause">Ⅱ</button>
  <div id="rotateHint">↻ Landscape gives you a wider view</div><div id="fps" hidden>FPS --</div>
 </div>
-<section id="results" class="modal" hidden><div class="panel"><h1 id="resultTitle">FINISHED!</h1><p id="resultStars" class="stars">★★★</p><p id="resultSummary"></p><p id="resultCoins">+100 coins</p><button id="restartBtn">RACE AGAIN</button></div></section>
+<section id="titleMenu" class="modal"><div class="panel homePanel">
+ <div class="titleIcon">🚤</div><h1 id="gameTitle">COZY RAPIDS</h1><p class="tagline">THUNDER BOATS · CUTE & CHAOTIC</p><p>Jump the waves. Catch the boost. Chase the cup!</p>
+ <div class="wallet">🪙 <span class="coinCount">0</span> COINS</div>
+ <button id="playBtn" class="primary">LET'S RACE</button><button id="settingsBtn" class="secondary">⚙ SETTINGS</button>
+ </div></section>
+<section id="boatMenu" class="modal" hidden><div class="panel widePanel">
+ <h2>CHOOSE YOUR BOAT</h2><div class="wallet">🪙 <span class="coinCount">0</span></div>
+ <div id="boatCards" class="cards"></div>
+ <div class="menuActions"><button id="boatBack" class="secondary">BACK</button><button id="boatNext" class="primary">NEXT →</button></div>
+ </div></section>
+<section id="trackMenu" class="modal" hidden><div class="panel widePanel">
+ <h2>CHOOSE A TRACK</h2><div id="trackCards" class="cards"></div>
+ <div class="menuActions"><button id="trackBack" class="secondary">BACK</button><button id="startRace" class="primary">START RACE!</button></div>
+ </div></section>
+<section id="settingsMenu" class="modal" hidden><div class="panel settingsPanel"><h2>SETTINGS</h2>
+ <label class="setting"><span>Sound</span><input id="soundToggle" type="checkbox" checked></label>
+ <label class="setting"><span>Device tilt steering</span><input id="tiltToggle" type="checkbox"></label>
+ <label class="setting"><span>PS1 vertex wobble</span><input id="wobbleToggle" type="checkbox"></label>
+ <label class="setting"><span>AI difficulty</span><select id="difficultySelect"><option value="easy">Easy</option><option value="normal">Normal</option><option value="hard">Hard</option></select></label>
+ <button id="closeSettings" class="primary">DONE</button>
+ </div></section>
+<section id="pauseMenu" class="modal" hidden><div class="panel"><h2>PAUSED</h2>
+ <button id="resumeBtn" class="primary">RESUME</button><button id="pauseSettings" class="secondary">SETTINGS</button><button id="quitBtn" class="secondary">MAIN MENU</button>
+ </div></section>
+<section id="results" class="modal" hidden><div class="panel"><h1 id="resultTitle">FINISHED!</h1><p id="resultStars" class="stars">★★★</p><p id="resultSummary"></p><p id="resultCoins">+100 coins</p>
+ <button id="restartBtn" class="primary">RACE AGAIN</button><button id="resultMenuBtn" class="secondary">MAIN MENU</button></div></section>
 <div id="fatal" hidden><h1>Unable to start game</h1><p id="fatalText"></p><button onclick="location.reload()">Try again</button></div></main><script type="module" src="./main.js"></script></body></html>

@@ -30,7 +30,7 @@ Done when: Sunny Cove is fully playable solo for 3 laps with a finish screen.
 - Boat collisions between racers (soft push, no damage).
 Done when: a full 6-boat race works start to finish and feels fair and fun.
 
-## [ ] Task D — Menus, boats, save, audio
+## [x] Task D — Menus, boats, save, audio
 - Title → boat select (4 boats with stat bars, driver billboard) → track select (best lap, stars) → race → results → retry/menu.
 - `audio.js` WebAudio sfx + engine hum, mute toggle. Settings: tilt, PS1 wobble, sound, difficulty.
 - `localStorage` save (key in README).
