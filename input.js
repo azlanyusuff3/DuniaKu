@@ -26,9 +26,8 @@ export function createInput(canvas, boostButton, tiltButton) {
     if (typeof e.gamma === "number") tiltSteer = clamp(e.gamma / 24, -1, 1);
   }
   async function setTilt(value) {
-    // Unsupported desktop/webview sensors must not report Tilt: ON.
-    if (value && typeof DeviceOrientationEvent === "undefined") value = false;
-    if (value && typeof DeviceOrientationEvent.requestPermission === "function") {
+    if (value && typeof DeviceOrientationEvent !== "undefined" &&
+        typeof DeviceOrientationEvent.requestPermission === "function") {
       try { if (await DeviceOrientationEvent.requestPermission() !== "granted") value = false; }
       catch (_) { value = false; }
     }
@@ -36,7 +35,6 @@ export function createInput(canvas, boostButton, tiltButton) {
     if (tiltButton) {
       tiltButton.textContent = "Tilt: " + (tiltEnabled ? "ON" : "OFF");
       tiltButton.setAttribute("aria-pressed", String(tiltEnabled));
-      tiltButton.dispatchEvent(new CustomEvent("rapids-tilt-changed", {detail:{enabled:tiltEnabled}}));
     }
     return tiltEnabled;
   }

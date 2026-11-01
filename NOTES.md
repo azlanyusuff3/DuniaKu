@@ -19,7 +19,9 @@
 
 - Post-D static QA: inspected all local JS imports, DOM identifiers, and parsed all nine project JS modules successfully (after removing ES module declarations for syntax checking). Fixed initial 3D menu preview, signed lap progress for reversing, and local sprite path handling. No browser/WebGL or physical-device playtest has been performed in this session; frame rate, handling and long-race behavior remain unverified.
 
-- Post-D controls QA: restored saved device-tilt steering at race start under a user gesture, persisted changes made through the in-race Tilt button, and kept the settings checkbox in sync when sensor access is unsupported/denied. This prevents a saved Tilt: ON setting from silently starting with tilt disabled and prevents desktop browsers from claiming unsupported sensors work.
+- Task F: Lantern Canyon and Frostbite Falls are now selectable after sequential Top-3 finishes; existing localStorage save key and rewards are reused. Canyon has warm sunset fog, grouped terracotta cliffs and lanterns, drifting barrels, and a steerable hidden cave branch. Frost has a separate longer hairpin layout, icy fog, snowbanks, crystals/ice chunks, and a waterfall corridor with a real jump ramp. All assets are procedural; no art file/CDN/service worker changes.
+- Shortcuts have optional lateral entrances, visible portals/guides, soft-bounded drivable spline branches, true position/checkpoint advancement (no teleport), route-specific hazards, and an AI chance of choosing the shortcut. Exit rejoins the normal spline at its marked location; attempts to cut across land without entering the portal receive the ordinary bank slow-down.
+- Track selection shows locked track requirements and stored best lap/stars. All 3 tracks should be manually playtested on mobile for handling, FPS, shortcut entry/exit reliability and AI competitiveness before Task G.
 
 ## Known bugs / TODO
 

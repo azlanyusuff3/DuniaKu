@@ -41,7 +41,7 @@ Generate the image sheets listed in `PROMPTS.md` and commit the raw PNGs to `spr
 Claude will cut them into `sprites/*.webp` and write `sprites/list.json`.
 The game must already look for `sprites/list.json` and use any sprite listed there, otherwise keep the placeholder.
 
-## [ ] Task F — Tracks 2 and 3 (Lantern Canyon, Frostbite Falls)
+## [x] Task F — Tracks 2 and 3 (Lantern Canyon, Frostbite Falls)
 - Add both tracks with unique scenery, sky/fog colours, hazards and one shortcut each.
 - Unlock order: finish top 3 on the previous track.
 
