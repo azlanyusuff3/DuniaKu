@@ -2,11 +2,12 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#86d7d9"><meta name="apple-mobile-web-app-capable" content="yes"><title>Cozy Rapids — Thunder Boats</title><link rel="manifest" href="./manifest.json"><link rel="stylesheet" href="./style.css"></head>
 <body><main id="app"><canvas id="game" aria-label="Cozy Rapids 3D boat racing"></canvas>
 <div id="overlay">
-  <div id="topbar"><div class="brand"><span class="brand-mark">~</span><div><b>COZY RAPIDS</b><small>THUNDER BOATS</small></div></div><div id="raceInfo">LAP <b id="lapValue">1</b>/3<br><span id="boostPips">⚡○○</span></div><div id="speed"><b id="speedValue">0</b><small>KM/H</small></div></div>
-  <div id="wrongWay" hidden>↩ WRONG WAY!</div>
-  <div id="tip">Follow the buoys! Drag the LEFT side to steer.</div>
-  <div id="bottom"><div id="steerHint" aria-hidden="true">◀ <span>STEER</span> ▶</div><button id="tiltBtn" class="pill" type="button">Tilt: OFF</button><button id="boostBtn" class="boost" type="button">BOOST <small>HOLD</small></button></div>
-  <div id="rotateHint">↻ Landscape gives you a wider view</div><div id="fps" hidden>FPS --</div>
+ <div id="topbar"><div class="brand"><span class="brand-mark">~</span><div><b>COZY RAPIDS</b><small>THUNDER BOATS</small></div></div><div class="stat" id="positionValue">1st</div><div id="raceInfo">LAP <b id="lapValue">1</b>/3<br><span id="boostPips">⚡○○</span></div><div id="speed"><b id="speedValue">0</b><small>KM/H</small></div></div>
+ <canvas id="minimap" width="150" height="115" aria-label="Track minimap"></canvas>
+ <div id="countdown">3</div><div id="wrongWay" hidden>↩ WRONG WAY!</div>
+ <div id="tip">Follow the buoys! Drag the LEFT side to steer.</div>
+ <div id="bottom"><div id="steerHint" aria-hidden="true">◀ <span>STEER</span> ▶</div><button id="tiltBtn" class="pill" type="button">Tilt: OFF</button><button id="boostBtn" class="boost" type="button">BOOST <small>HOLD</small></button></div>
+ <div id="rotateHint">↻ Landscape gives you a wider view</div><div id="fps" hidden>FPS --</div>
 </div>
-<section id="results" class="modal" hidden><div class="panel"><h1 id="resultTitle">FINISHED!</h1><p id="resultSummary"></p><button id="restartBtn">RACE AGAIN</button></div></section>
+<section id="results" class="modal" hidden><div class="panel"><h1 id="resultTitle">FINISHED!</h1><p id="resultStars" class="stars">★★★</p><p id="resultSummary"></p><p id="resultCoins">+100 coins</p><button id="restartBtn">RACE AGAIN</button></div></section>
 <div id="fatal" hidden><h1>Unable to start game</h1><p id="fatalText"></p><button onclick="location.reload()">Try again</button></div></main><script type="module" src="./main.js"></script></body></html>

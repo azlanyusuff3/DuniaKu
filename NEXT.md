@@ -24,7 +24,7 @@ Done when: opening the page lets me steer a boat on open water smoothly.
 - Boost pickups + boost meter + boost button.
 Done when: Sunny Cove is fully playable solo for 3 laps with a finish screen.
 
-## [ ] Task C — AI racers, HUD, race flow
+## [x] Task C — AI racers, HUD, race flow
 - `ai.js`: 5 AI boats with rubber-banding, lane offsets, mistakes, boost use, 3 difficulties.
 - `hud.js`: position, lap, speed, boost pips, minimap, 3-2-1-GO countdown, results screen with stars/coins.
 - Boat collisions between racers (soft push, no damage).

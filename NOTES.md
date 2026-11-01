@@ -9,6 +9,9 @@
 - Task B: Sunny Cove is a closed Catmull-Rom path; buoy-marked navigable area is bounded by soft corrective side pushes. 12 ordered checkpoint sectors per lap prevent shortcutting across the start. Two ramps launch with ballistic motion; midair steering accumulates trick spin, rewarding a complete rotation with boost. Respawning blue pickups refill boost pips. Solo three-lap finish uses a temporary results overlay (expanded in Task C).
 - Task B scope: track records for future maps are placeholders, not playable yet; only Sunny Cove is instantiated. Keyboard Space or BOOST button consumes pickups; holding BOOST consumes subsequent pips as effects expire.
 
+- Task C: five procedural AI racers use spline lookahead steering, five lane offsets, periodic steering mistakes, player-relative pace adjustment and occasional boost. Player- and AI-pair collisions soft-push without damage. A 3-2-1 countdown starts each race; HUD shows placement, lap, speed, boost and live canvas minimap. Race results grant 1–3 stars and coins (persistent saving is Task D).
+- Positions are sorted by completed distance and finish time, not Euclidean distance to finish. AI boat physics is identical to player physics with tuned speed and simple catch-up.
+
 ## Known bugs / TODO
 
 ## Playtest feedback (owner + Claude write here)
