@@ -77,7 +77,7 @@ Buka game. Kalau gambar nampak, tick dalam senarai bawah dan commit.
 - [x] items.png
 - [x] keys.png
 - [x] enemies.png
-- [ ] worlds.png
+- [x] worlds.png
 - [ ] tiles_taman.png
 - [ ] tiles_hutan.png
 - [ ] tiles_gua.png
