@@ -17,6 +17,8 @@
 - Art compatibility: loads sprites/list.json when present; if it maps driver_<boatId> or drivers.<boatId> to a sprites/*.webp file, mounts the transparent cutout over procedural driver. Missing list/images safely use built-in placeholder. Art Task E is deliberately untouched.
 - No service worker is created per README. No external libraries/assets are imported at runtime; Three.js remains vendored in lib/.
 
+- Post-D static QA: inspected all local JS imports, DOM identifiers, and parsed all nine project JS modules successfully (after removing ES module declarations for syntax checking). Fixed initial 3D menu preview, signed lap progress for reversing, and local sprite path handling. No browser/WebGL or physical-device playtest has been performed in this session; frame rate, handling and long-race behavior remain unverified.
+
 ## Known bugs / TODO
 
 ## Playtest feedback (owner + Claude write here)

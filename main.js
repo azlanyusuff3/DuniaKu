@@ -166,8 +166,9 @@ function artPath(name){
  if(value&&typeof value==="object")value=value.file||value.path||value.src;
  if(typeof value!=="string")return null;
  // Only local sprite files: never allow CDN/runtime network dependencies.
- const relative=value.replace(/^\.?\//,"");
- return /^sprites\/[a-zA-Z0-9_./-]+\.webp$/.test(relative)?("./"+relative):null;
+ const relative=value.replace(/^\.\//,"");
+ const local=relative.startsWith("sprites/")?relative:"sprites/"+relative;
+ return /^sprites\/[a-zA-Z0-9_./-]+\.webp$/.test(local)&&!local.includes("..")?("./"+local):null;
 }
 function useSprites(){
  if(!boat||!spriteList)return;
@@ -206,7 +207,7 @@ function resize(){
  if(lowResHeight!==renderHeight)lowResHeight=renderHeight;
  renderer.setSize(Math.max(1,Math.round(renderHeight*w/h)),renderHeight,false);chase.resize(w,h);
 }
-window.addEventListener("resize",resize);resize();updateWallet();loadSpriteList();enterTitle();
+window.addEventListener("resize",resize);resize();buildGame();updateWallet();loadSpriteList();enterTitle();
 function tick(now){
  const dt=Math.min((now-last)/1000,.05);last=now;elapsed+=dt;
  if(state==="countdown"){

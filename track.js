@@ -124,8 +124,8 @@ export function createTrack(scene,definition) {
     const directional=b.vx*n.t.x+b.vz*n.t.z;
     b.wrongWay=directional < -6 && b.speed>8;
     if(Math.abs(progressDelta)<.06){
-      if(progressDelta>0) {
-        b.travel+=progressDelta;
+      if(progressDelta>0 || b.travel>0) {
+        b.travel=Math.max(0,b.travel+progressDelta);
         const stage=Math.floor(b.travel*12);
         if(stage>b.checkpoint && stage<=b.checkpoint+2)b.checkpoint=stage;
         if(b.checkpoint>=b.lap*12){
