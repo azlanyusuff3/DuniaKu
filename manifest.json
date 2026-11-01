@@ -1,11 +1,14 @@
 {
-  "name": "Cozy Rapids — Thunder Boats",
-  "short_name": "Cozy Rapids",
+  "name": "Momo Maze",
+  "short_name": "Momo Maze",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
-  "orientation": "any",
-  "background_color": "#86d7d9",
-  "theme_color": "#86d7d9",
-  "description": "A cute, low-poly 3D powerboat arcade racer. Play on the water!"
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#1d2a18",
+  "theme_color": "#2e5a24",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
 }
